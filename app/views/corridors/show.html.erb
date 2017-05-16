@@ -1,0 +1,9 @@
+<h1><%= @corridor.address %></h1>
+
+  <br> TNC Address is <%= @corridor.address %> </br>
+  <br> This TNC will bring you to <%= @corridor.planet.name %> </br>
+  <br> The level of sociability of the population is <%= @corridor.planet.sociability %> </br>
+
+ <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor), class: "btn btn-primary" %> </br>
+
+ <br> <%= link_to "Back to corridors", corridors_path, class: "btn btn-primary" %> </br>

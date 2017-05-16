@@ -1,0 +1,5 @@
+<h1>List of TNC</h1>
+<% @corridors.each do |corridor| %>
+  <h2> <%= corridor.address %></h2>
+  <%= link_to 'See details', corridor_path(corridor), class: "btn btn-primary" %>
+  <% end %>

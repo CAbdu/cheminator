@@ -13,6 +13,16 @@ class PlanetsController < ActionController::Base
   end
 
   def create
+    @planet = Planet.new(planet_params)
+    @planet.save
+    redirect_to planet(@planet)
+  end
+
+  private
+
+  def planet_params
+    params.require(:planet).permit(:name, :temperature, :distance, :environment, :population, :language, :sociability, :sexual_compatibility)
   end
 
 end
+
