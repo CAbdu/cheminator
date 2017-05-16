@@ -22,7 +22,7 @@ class BookingsController < ActionController::Base
 
   private
 
-  def dose_params
-    params.require(:dose).permit(:description, :ingredient_id)
+  def booking_params
+    params.require(:booking).permit(:rating, :review)
   end
 end
