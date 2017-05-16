@@ -1,4 +1,4 @@
-class PlanetsController < ActionController::Base
+class PlanetsController < ApplicationController
 
   def index
     @planets = Planet.all
