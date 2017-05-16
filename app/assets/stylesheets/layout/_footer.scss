@@ -1,14 +1,14 @@
 .footer-cheminator {
   background-size: cover;
   background: orange;
-  height: 10vh;
   padding: 20px;
-  margin-bottom: 0px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-cheminator i{
   font-size: 30px;
   padding: 10px;
-  margin-bottom: 20px;
   color: black;
 }
