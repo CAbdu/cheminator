@@ -1,4 +1,4 @@
-class BookingsController < ActionController::Base
+class BookingsController < ApplicationController
 
   def index
     @bookings = Booking.all
