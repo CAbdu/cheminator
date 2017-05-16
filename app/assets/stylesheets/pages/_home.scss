@@ -2,3 +2,23 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.banner {
+  background-size: cover;
+  height: 80vh;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+}
+
+.banner p {
+  margin-bottom: 50px;
+  color: white;
+}
+
+.banner h1 {
+  font-size: 80px;
+  color: orange;
+}
