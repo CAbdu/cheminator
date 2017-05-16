@@ -1,7 +1,7 @@
 class CorridorsController < ApplicationController
 
   def index
-    @corridors = Corridor.where(city: params[:search])
+    @corridors = Corridor.all
   end
 
   def show
