@@ -1,4 +1,4 @@
-class CorridorsController < ActionController::Base
+class CorridorsController < ApplicationController
 
   def index
     @corridors = Corridor.all
