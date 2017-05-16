@@ -1,0 +1,59 @@
+<div class="navbar-cheminator">
+  <!-- Logo -->
+  <a href="/" class="navbar-cheminator-brand">
+    <%= image_tag "cheminator_helmet.jpg" %>
+  </a>
+
+  <!-- Right Navigation -->
+  <div class="navbar-cheminator-right hidden-xs hidden-sm">
+
+    <!-- Search form -->
+    <form action="" class="navbar-cheminator-search">
+      <input type="text" class="navbar-cheminator-search-input" placeholder="Search something">
+      <button type="submit" class="navbar-cheminator-search-btn">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+
+    <!-- Text link -->
+    <a href="" class="navbar-cheminator-item navbar-cheminator-link">Contact</a>
+
+    <!-- Text link -->
+    <a href="" class="navbar-cheminator-item navbar-cheminator-link">Team</a>
+
+    <!-- Notification link-->
+    <a href="" class="navbar-cheminator-item navbar-cheminator-link">
+      <div class="badge-container">
+        <i class="fa fa-envelope-o"></i>
+        <div class="badge badge-blue">3</div>
+      </div>
+    </a>
+
+    <!-- Profile picture and dropdown -->
+    <div class="navbar-cheminator-item">
+      <div class="dropdown">
+         <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-cheminateor-menu" data-toggle="dropdown">
+        <ul class="dropdown-menu dropdown-menu-right navbar-cheminator-dropdown-menu">
+          <li><a href="#">Profile</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Log Out</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Button (call-to-action) -->
+    <a href="" class="navbar-cheminator-item navbar-cheminator-button btn">Post stuff</a>
+  </div>
+
+  <!-- Dropdown appearing on mobile only -->
+  <div class="navbar-cheminator-item hidden-md hidden-lg">
+    <div class="dropdown">
+      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-cheminator-dropdown-menu">
+        <li><a href="#">Some mobile link</a></li>
+        <li><a href="#">Other one</a></li>
+        <li><a href="#">Other one</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
