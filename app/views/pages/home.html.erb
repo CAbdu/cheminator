@@ -2,6 +2,11 @@
   <div class="banner-content">
     <h1>&#9790;HEMIN&#9733;T&#10026;R</h1>
     <p>Discover space with thermonuclear corridors</p>
-    <a class="btn btn-primary btn-lg">Discover</a>
+
+    <%= simple_form_for :search do |f| %>
+      <%= f.input :address, label: false, placeholder: 'Enter a city' %>
+      <%= f.submit "GO", class: "btn btn-primary" %>
+    <% end %>
+
   </div>
 </div>
