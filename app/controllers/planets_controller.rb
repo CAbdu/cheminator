@@ -9,7 +9,7 @@ class PlanetsController < ActionController::Base
   end
 
   def new
-    @planet : Planet.new
+    @planet = Planet.new
   end
 
   def create
