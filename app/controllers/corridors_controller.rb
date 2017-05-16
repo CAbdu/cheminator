@@ -9,11 +9,19 @@ class CorridorsController < ActionController::Base
   end
 
   def new
-    @corridor : Corridor.new
+    @corridor = Corridor.new
   end
 
   def create
+    @corridor = Corridor.new(corridor_params)
+    @corridor.save
+    redirect_to corridor(@corridor)
+  end
 
+  private
+
+  def corridor_params
+    params.require(:corridor).permit(:adress)
   end
 
 end

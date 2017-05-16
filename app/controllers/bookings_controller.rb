@@ -1,8 +1,7 @@
 class BookingsController < ActionController::Base
 
   def index
-    @corridor = Corridor.find(params[:corridor_id])
-    @booking = Booking.new
+    @bookings = Booking.all
   end
 
   def show
@@ -14,6 +13,16 @@ class BookingsController < ActionController::Base
   end
 
   def create
+    @corridor = Corridor.find(params[:corridor_id])
+    @booking = Booking.new
+
+    @booking.save
+    redirect_to corridor_path(@corridor)
   end
 
+  private
+
+  def booking_params
+    params.require(:booking).permit(:rating, :review)
+  end
 end

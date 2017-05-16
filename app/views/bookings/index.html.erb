@@ -1,0 +1,8 @@
+<h1>List of Bookings</h1>
+<% @bookings.each do |booking| %>
+<br> <%= booking.planet.name %></br>
+  <br> <%= booking.rating %></br>
+  <br> <%= booking.review %></br>
+  <% end %>
+
+ <br> <%= link_to "Back to corridors", corridors_path, class: "btn btn-primary" %> </br>
