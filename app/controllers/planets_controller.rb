@@ -9,7 +9,7 @@ class PlanetsController < ApplicationController
   end
 
   def new
-    @planet : Planet.new
+    @planet = Planet.new
   end
 
   def create

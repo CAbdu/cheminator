@@ -21,7 +21,7 @@ class CorridorsController < ApplicationController
   private
 
   def corridor_params
-    params.require(:corridor).permit(:adress)
+    params.require(:corridor).permit(:address)
   end
 
 end
