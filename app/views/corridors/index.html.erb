@@ -1,6 +1,17 @@
-<h1>List of TNC</h1>
-<% @corridors.each do |corridor| %>
-  <h2> <%= corridor.name %></h2>
-  <h2> <%= corridor.address %></h2>
-  <%= link_to 'See details', corridor_path(corridor), class: "btn btn-primary" %>
-  <% end %>
+<div class="container">
+  <h1> List of Themo-Nuclear Corridors</h1>
+    <div class="row">
+      <% @corridors.each do |corridor| %>
+        <div class="col-xs-12 col-sm-4">
+          <%= link_to corridor_path(corridor) do %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path("corridor.jpg")%>);">
+              <div class="card-description">
+                <h2> TNC to --> <%= corridor.planet.name %> !!! </h2>
+                <p> <%= corridor.address %> </p>
+              </div>
+            </div>
+            <% end %>
+        </div>
+      <% end %>
+    </div>
+</div>
