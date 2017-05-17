@@ -1,11 +1,7 @@
-<h1>List of Bookings</h1>
-<% @bookings.each do |booking| %>
-<br> <%= booking.planet.name %></br>
-  <br> <%= booking.rating %></br>
-  <br> <%= booking.review %></br>
-  <% end %>
 
- <br> <%= link_to "Back to corridors", corridors_path, class: "btn btn-primary" %> </br>
-
-
-
+<div class="container">
+  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://i.ytimg.com/vi/B5JV661V5T4/maxresdefault.jpg');">
+      <br> You just booked TNC with destination to <%= @corridor.planet.name%> where you will meet a population composed of <%= @corridor.planet.population%> </br>
+      <br> The sexual compatibility rate of this population with humans is <%= @corridor.planet.sexual_compatibility%> out of 5 ... Enjoy! </br>
+  </div>
+</div>

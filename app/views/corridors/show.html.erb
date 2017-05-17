@@ -22,14 +22,15 @@
             <h2> Population informations </h2>
             <p> Name : <%= @corridor.planet.population%> </p>
             <p> Level of sociability : <%= @corridor.planet.sociability%> </p>
-            <p> Sexual compatibility with humans : <%= @corridor.planet.sexual_compatibility * 3 %> </p>
+            <p> Sexual compatibility with humans : <%= @corridor.planet.sexual_compatibility%> </p>
           </div>
         </div>
       </div>
     </div>
 </div>
 
+
 <div class="container text-center">
- <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor), class: "btn btn-medium" %> </br>
+ <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor), method: :post, class: "btn btn-medium" %> </br>
  <br> <%= link_to "Back to corridors", corridors_path, class: "btn btn-medium" %> </br>
 </div>
