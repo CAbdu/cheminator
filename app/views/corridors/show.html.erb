@@ -18,13 +18,13 @@
   </div>
 
   <div class="row">
-     <div class="col-xs-12 col-sm-8 col-md-8">
+    <div class="col-xs-12 col-sm-8 col-md-8">
        <div class="card_planet" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://68.media.tumblr.com/4170a36a91012ab839658113909762d5/tumblr_mm7nhfz9yP1rx0ahxo1_400.gif');">
            <div class="card-description">
              <h2> Population informations </h2>
              <p> Name : <%= @corridor.planet.population%> </p>
              <p> Level of sociability : <%= @corridor.planet.sociability%> </p>
-             <p> Sexual compatibility with humans : <%= @corridor.planet.sexual_compatibility * 3 %> </p>
+             <p> Sexual compatibility with humans : <%= @corridor.planet.sexual_compatibility%> </p>
            </div>
          </div>
        </div>
@@ -32,9 +32,6 @@
   </div>
 
 <div class="container text-center">
-<br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor), class: "btn btn-medium" %> </br>
-<br> <%= link_to "Back to corridors", corridors_path, class: "btn btn-medium" %> </br>
-</div>
-
-
+   <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor), method: :post, class: "btn btn-medium" %> </br>
+   <br> <%= link_to "Back to corridors", corridors_path, class: "btn btn-medium" %> </br>
 </div>

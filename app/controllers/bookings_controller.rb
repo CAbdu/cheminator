@@ -1,28 +1,31 @@
 class BookingsController < ApplicationController
 
-  def index
-    @bookings = Booking.all
-  end
+ def index
+  @corridor = Corridor.find(params[:corridor_id])
+  @bookings = Booking.all
+ end
 
-  def show
-    @booking = Booking.find(params[:id])
-  end
+ def show
+   @booking = Booking.find(params[:id])
+ end
 
-  def new
-    @booking = Booking.new
-  end
+ def new
+   @booking = Booking.new
+ end
 
-  def create
-    @corridor = Corridor.find(params[:corridor_id])
-    @booking = Booking.new
+ def create
+   @user = current_user
+   @corridor = Corridor.find(params[:corridor_id])
+   @planet = @corridor.planet
+   @booking = Booking.new(user: @user, planet: @planet )
 
-    @booking.save
-    redirect_to corridor_path(@corridor)
-  end
+   @booking.save
+   redirect_to corridor_bookings_path(@corridor)
+ end
 
-  private
+ private
 
-  def booking_params
-    params.require(:booking).permit(:rating, :review)
-  end
+ def booking_params
+   params.require(:booking).permit(:planet_id, :user_id)
+ end
 end
