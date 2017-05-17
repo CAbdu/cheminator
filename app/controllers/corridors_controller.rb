@@ -1,8 +1,15 @@
 class CorridorsController < ApplicationController
 
   def index
-    @corridors = Corridor.all
-    # @corridors = Corridor.where.not(latitude: nil, longitude: nil)
+
+    if params[:search][:address] != ""
+      @corridors = Corridor.near(params[:search][:address], 10)
+    else
+      @corridors = Corridor.where.not(latitude: nil, longitude: nil)
+    end
+
+
+
 
     @hash = Gmaps4rails.build_markers(@corridors) do |corridor, marker|
       marker.lat corridor.latitude

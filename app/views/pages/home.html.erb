@@ -3,8 +3,8 @@
     <h1>&#9790;HEMIN&#9733;T&#10026;R</h1>
     <p>Discover space with thermonuclear corridors</p>
 
-    <%= simple_form_for :search do |f| %>
-      <%= f.input :address, label: false, placeholder: 'Enter a city' %>
+    <%= simple_form_for :search, url: corridors_path, method: :get do |f| %>
+      <%= f.input :address, label: false, placeholder: 'Enter a Earth-city to discover its TNC' %>
       <%= f.submit "GO", class: "btn btn-primary" %>
     <% end %>
 
