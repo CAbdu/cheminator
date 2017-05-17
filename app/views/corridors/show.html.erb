@@ -7,3 +7,14 @@
  <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor), class: "btn btn-primary" %> </br>
 
  <br> <%= link_to "Back to corridors", corridors_path, class: "btn btn-primary" %> </br>
+
+<% content_for(:after_js) do %>
+ <%= javascript_tag do %>
+  $(document).ready(function() {
+  var coord = <%= raw @corridor_coordinates.to_json %>;
+    <!-- alert('Flat coordinates are ' + coord.lat + ', ' + coord.lng); -->
+
+    alert('<%= j @alert_message %>');
+  });
+ <% end %>
+<% end %>
