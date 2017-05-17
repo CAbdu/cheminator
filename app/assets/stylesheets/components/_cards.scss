@@ -3,6 +3,11 @@ h1 {
   font-family: "Roboto";
 }
 
+h2 {
+  color: white;
+  font-family: "Raleway";
+}
+
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -36,3 +41,27 @@ h1 {
 .card-link:hover{
   opacity: 0.4;
 }
+
+.card_planet {
+  height: 250px;
+  width: 600px;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.6);
+  background-size: cover !important;
+  color: white;
+  position: relative;
+  margin: 20px 0;
+}
+
+.card_planet_description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.card_planet_description h2 {
+  font-size: 20px;
+}
+
+.card_planet_description p {
+  font-size: 25px;
+  }
