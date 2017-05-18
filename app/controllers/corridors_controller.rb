@@ -1,4 +1,5 @@
 class CorridorsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def index
 
@@ -7,9 +8,6 @@ class CorridorsController < ApplicationController
     else
       @corridors = Corridor.where.not(latitude: nil, longitude: nil)
     end
-
-
-
 
     @hash = Gmaps4rails.build_markers(@corridors) do |corridor, marker|
       marker.lat corridor.latitude
