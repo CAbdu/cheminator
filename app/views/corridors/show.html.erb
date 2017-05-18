@@ -5,6 +5,7 @@
   <h2> This TNC will bring you to 🚀 <%= @corridor.planet.name %> !!!  </h2>
 
     <div class="row">
+
       <div class="col-xs-12 col-sm-8 col-md-8">
         <div class="card_planet" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.starshipnivan.com/blog/wp-content/uploads/2011/12/Kepler-22b.jpg');">
            <div class="card-description">
@@ -42,4 +43,21 @@
      class: "btn btn-medium" %> </br>
   </div>
 
+<<<<<<< HEAD
+=======
+  <div class="container text-center">
+     <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor),
+     method: :post,
+     class: "btn btn-medium" %> </br>
+  </div>
+
+  <div class="container text-center">
+     <br> <%= link_to 'back to your search',
+        corridors_path,
+     method: :get,
+     class: "btn btn-medium" %> </br>
+  </div>
+(corridors(params[:search][:address]))
+>>>>>>> e75f867ef4cc07bcc3edadf15a61e675e4ef4ece
 </div>
+

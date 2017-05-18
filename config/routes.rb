@@ -4,9 +4,9 @@ Rails.application.routes.draw do
  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
  resources :corridors, only: [:index, :show, :new, :create], :shallow => true do
-   resources :bookings, only: [:index, :new, :create]
+   resources :bookings, only: [:new, :create]
  end
 
  get "/address", to: "corridors#define_address"
-
+ resources :bookings, only: [:index]
 end
