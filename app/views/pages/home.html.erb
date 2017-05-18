@@ -5,6 +5,7 @@
 
     <%= simple_form_for :search, url: address_path, method: :get do |f| %>
       <%= f.input :address, label: false, collection: @cities, prompt: "All corridors" %>
+      <%= f.input :date, as: :date, label: false  %>
       <strong> <%= f.submit "GO", class: "btn btn-medium" %> </strong>
     <% end %>
 
