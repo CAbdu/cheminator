@@ -95,39 +95,48 @@ puts 'Creating corridors...'
 corridors_attributes = [
   {
     planet: Planet.find(1),
-    address: "91 rue Camille Sauvageau Bordeaux"
+    address: "91 rue Camille Sauvageau Bordeaux",
+    city: "Bordeaux - France"
   },
   {
     planet: Planet.find(2),
-    address: "107 Cours Balguerie Stuttenberg Bordeaux"
+    address: "107 Cours Balguerie Stuttenberg Bordeaux",
+    city: "Bordeaux - France"
   },
    {
     planet: Planet.find(3),
-    address: "Hanga Roa Chili"
+    address: "Hanga Roa Chili",
+    city: "Hanga Roa - Chili"
   },
   {
     planet: Planet.find(4),
-    address: "91 rue Belleville Paris"
+    address: "91 rue Belleville Paris",
+    city: "Paris - France"
   },
   {
     planet: Planet.find(5),
-    address: "22 avenue de la République Limoges"
+    address: "22 avenue de la République Limoges",
+    city: "Limoges - France"
   },
   {
     planet: Planet.find(6),
-    address: "20 Quai Richelieu Bordeaux"
+    address: "20 Quai Richelieu Bordeaux",
+    city: "Bordeaux - France"
   },
   {
     planet: Planet.find(7),
-    address: "11 Park Avenue New York"
+    address: "11 Park Avenue New York",
+    city: "New York - USA"
   },
    {
     planet: Planet.find(8),
-    address: "Hiroshima Japan"
+    address: "Hiroshima Japan",
+    city: "Hiroshima - Japan"
   },
    {
     planet: Planet.find(9),
-    address: "55 rue du Faubourg Saint-Honoré Paris"
+    address: "55 rue du Faubourg Saint-Honoré Paris",
+    city: "Paris - France"
   },
 ]
 Corridor.create!(corridors_attributes)

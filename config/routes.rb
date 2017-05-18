@@ -7,4 +7,6 @@ Rails.application.routes.draw do
    resources :bookings, only: [:index, :new, :create]
  end
 
+ get "/address", to: "corridors#define_address"
+
 end
