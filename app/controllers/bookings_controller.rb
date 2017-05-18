@@ -1,8 +1,7 @@
 class BookingsController < ApplicationController
 
  def index
-  @corridor = Corridor.find(params[:corridor_id])
-  @bookings = Booking.all
+  @bookings = current_user.bookings
  end
 
  def show
@@ -14,13 +13,15 @@ class BookingsController < ApplicationController
  end
 
  def create
-   @user = current_user
    @corridor = Corridor.find(params[:corridor_id])
    @planet = @corridor.planet
-   @booking = Booking.new(user: @user, planet: @planet )
+   @booking = Booking.new(user: current_user, planet: @planet )
 
-   @booking.save
-   redirect_to corridor_bookings_path(@corridor)
+   if @booking.save
+    redirect_to bookings_path
+  else
+    render "corridors/show"
+  end
  end
 
  private
