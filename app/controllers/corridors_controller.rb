@@ -1,15 +1,16 @@
 class CorridorsController < ApplicationController
 
-  def index
+  def define_address
+    session[:address] = params[:search][:address]
+    redirect_to corridors_path
+  end
 
-    if params[:search][:address] != ""
-      @corridors = Corridor.near(params[:search][:address], 10)
+  def index
+    if session[:address] != ""
+      @corridors = Corridor.near(session[:address], 10)
     else
       @corridors = Corridor.where.not(latitude: nil, longitude: nil)
     end
-
-
-
 
     @hash = Gmaps4rails.build_markers(@corridors) do |corridor, marker|
       marker.lat corridor.latitude
