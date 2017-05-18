@@ -7,7 +7,7 @@
     <div class="row">
 
       <div class="col-xs-12 col-sm-8 col-md-8">
-        <div class="card_planet" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://www.starshipnivan.com/blog/wp-content/uploads/2011/12/Kepler-22b.jpg');">
+        <div class="card_planet" style="background-image: url('<%= image_path(@corridor.planet.image)%>');">
            <div class="card-description">
              <h2> Planet informations </h2>
              <p> Temperature: <%= @corridor.planet.temperature%>°C</p>

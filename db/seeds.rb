@@ -11,7 +11,8 @@ planets_attributes = [
     population: "bitians, humans, ewoks",
     language: "bitian",
     sociability: 4,
-    sexual_compatibility: 2
+    sexual_compatibility: 2,
+    image: 'planet1.jpg'
   },
   { name: "Wagon Prime",
     temperature: 25,
@@ -20,7 +21,8 @@ planets_attributes = [
     population: "humans, illuminatis, neptunians",
     language: "human",
     sociability: 5,
-    sexual_compatibility: 5
+    sexual_compatibility: 5,
+    image: 'planet4.jpg'
   },
   { name: "Xanadu",
     temperature: 89,
@@ -29,7 +31,8 @@ planets_attributes = [
     population: "kryptonians, venusians, neptunians",
     language: "xanadian",
     sociability: 2,
-    sexual_compatibility: 2
+    sexual_compatibility: 2,
+    image: 'planet6.jpg'
   },
   { name: "Neptune",
     temperature: 45,
@@ -38,7 +41,8 @@ planets_attributes = [
     population: "naptunians, svarogians, humans",
     language: "neptunian",
     sociability: 2,
-    sexual_compatibility: 4
+    sexual_compatibility: 4,
+    image: 'planet5.jpg'
   },
   { name: "Pluton",
     temperature: 234,
@@ -47,7 +51,8 @@ planets_attributes = [
     population: "plutonians, xanadians, ewoks",
     language: "plutonian",
     sociability: 3,
-    sexual_compatibility: 3
+    sexual_compatibility: 3,
+    image: 'planet7.jpg'
   },
   { name: "Svarog",
     temperature: 77,
@@ -56,7 +61,8 @@ planets_attributes = [
     population: "svarogians, humans",
     language: "svarogian",
     sociability: 2,
-    sexual_compatibility: 5
+    sexual_compatibility: 5,
+    image: 'planet3.jpg'
   },
   { name: "Sirius 4",
     temperature: 2,
@@ -65,7 +71,8 @@ planets_attributes = [
     population: "sirians, moonians",
     language: "sirian",
     sociability: 5,
-    sexual_compatibility: 3
+    sexual_compatibility: 3,
+    image: 'planet8.jpg'
   },
   { name: "Regulus Prime",
     temperature: 54,
@@ -74,7 +81,8 @@ planets_attributes = [
     population: "regulians, humans",
     language: "regulian",
     sociability: 1,
-    sexual_compatibility: 3
+    sexual_compatibility: 3,
+    image: 'planet9.jpg'
   },
   { name: "Endor",
     temperature: 21,
@@ -83,7 +91,8 @@ planets_attributes = [
     population: "endorians, ewoks",
     language: "ewok",
     sociability: 4,
-    sexual_compatibility: 1
+    sexual_compatibility: 1,
+    image: 'planet2.jpg'
   }
 ]
 
