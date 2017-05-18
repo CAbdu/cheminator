@@ -6,5 +6,6 @@ Rails.application.routes.draw do
  resources :corridors, only: [:index, :show, :new, :create], :shallow => true do
    resources :bookings, only: [:new, :create]
  end
+
  resources :bookings, only: [:index]
 end
