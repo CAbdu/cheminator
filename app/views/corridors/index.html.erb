@@ -7,7 +7,7 @@
         <% @corridors.each do |corridor| %>
           <div class="col-xs-12 col-md-6">
             <%= link_to corridor_path(corridor) do %>
-              <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= asset_path("corridor.jpg")%>);">
+              <div class="card" style="background-image: url('<%= image_path(corridor.planet.image)%>');">
                 <div class="card-description">
                   <h2> TNC to --> <%= corridor.planet.name %> !!! </h2>
                   <p> <%= corridor.address %> </p>
