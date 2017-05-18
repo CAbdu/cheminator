@@ -1,7 +1,20 @@
 
-<div class="container">
-  <div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://i.ytimg.com/vi/B5JV661V5T4/maxresdefault.jpg');">
-      <br> You just booked TNC with destination to <%= @corridor.planet.name%> where you will meet a population composed of <%= @corridor.planet.population%> </br>
-      <br> The sexual compatibility rate of this population with humans is <%= @corridor.planet.sexual_compatibility%> out of 5 ... Enjoy! </br>
+
+<div class="banner" style="background-image: url('https://cdn.dribbble.com/users/623359/screenshots/3061757/rocket_launch.gif');">
+
+  <div>
+
+    <h1>Your space travels</h1>
+
+      <% @bookings.reverse.each do |booking| %>
+
+      <br> You 🚀 to <%= booking.planet.name %> on <%= booking.created_at.strftime("%d/%m/%Y") %> </br>
+
+
+
+    <% end %>
+
   </div>
 </div>
+
+
