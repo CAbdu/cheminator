@@ -1,4 +1,5 @@
 class CorridorsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def define_address
     session[:address] = params[:search][:address]

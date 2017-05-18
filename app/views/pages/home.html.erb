@@ -5,8 +5,7 @@
 
     <%= simple_form_for :search, url: address_path, method: :get do |f| %>
       <%= f.input :address, label: false, placeholder: 'Enter a Earth-city to discover its TNC' %>
-
-      <%= f.submit "GO", class: "btn btn-primary" %>
+      <strong> <%= f.submit "GO", class: "btn btn-medium" %> </strong>
     <% end %>
 
   </div>

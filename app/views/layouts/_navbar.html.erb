@@ -8,7 +8,6 @@
   <div class="navbar-cheminator-right hidden-xs hidden-sm">
 
     <!-- Text link -->
-    <a href="" class="navbar-cheminator-item navbar-cheminator-link">Contact</a>
 
     <!-- Text link -->
     <a href="" class="navbar-cheminator-item navbar-cheminator-link">Team</a>
@@ -16,8 +15,7 @@
     <!-- Notification link-->
     <a href="" class="navbar-cheminator-item navbar-cheminator-link">
       <div class="badge-container">
-        <i class="fa fa-envelope-o"></i>
-        <div class="badge badge-blue">3</div>
+        <div class="badge badge-blue"></div>
       </div>
     </a>
 
@@ -28,13 +26,14 @@
         <ul class="dropdown-menu dropdown-menu-right navbar-cheminator-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Log Out</a></li>
+          <li> <%=link_to "Log out", destroy_user_session_path, method: :delete %>
+          </li>
         </ul>
       </div>
     </div>
 
     <!-- Button (call-to-action) -->
-    <a href="" class="navbar-cheminator-item navbar-cheminator-button btn">Post stuff</a>
+    <%= link_to "Log in", user_session_path, method: :post %>
   </div>
 
   <!-- Dropdown appearing on mobile only -->
