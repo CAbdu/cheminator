@@ -8,5 +8,7 @@ Rails.application.routes.draw do
  end
 
  get "/address", to: "corridors#define_address"
+ get "/team", to: "pages#team"
+
  resources :bookings, only: [:index]
 end
