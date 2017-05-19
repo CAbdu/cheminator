@@ -32,7 +32,7 @@
   color: orange;
   border: 3px solid orange;
   padding: 10px 15px;
-  border-radius: 50px;
+  border-radius: 10px;
   font-weight: lighter;
   opacity: 1;
 }
@@ -65,4 +65,11 @@
 
 .corridors {
   background-color: #234E65;
+  min-height: 80vh;
+}
+
+.corridors h2 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 10px;
 }

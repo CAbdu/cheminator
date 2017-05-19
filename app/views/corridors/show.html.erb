@@ -1,50 +1,59 @@
 <div class="min-height" >
 
-  <div class="container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('http://planetcompas.com/live/wp-content/uploads/2013/04/2015-01-Beautiful-Planet-And-Space-4-Cool-Wallpapers-HD.jpg');">
+  <div class="corridors">
 
-  <h2> This TNC will bring you to 🚀 <%= @corridor.planet.name %> !!!  </h2>
-
-    <div class="row">
-
-      <div class="col-xs-12 col-sm-8 col-md-8">
-        <div class="card_planet" style="background-image: url('<%= image_path(@corridor.planet.image)%>');">
-           <div class="card-description">
-             <h2> Planet informations </h2>
-             <p> Temperature: <%= @corridor.planet.temperature%>°C</p>
-             <p> Distance from TNC earthbase: <%= @corridor.planet.distance%> </p>
-             <p> Environment: <%= @corridor.planet.environment%> </p>
-           </div>
-         </div>
-     </div>
-    </div>
+    <h2> This TNC will bring you to 🚀 <%= @corridor.planet.name %> !!!  </h2>
 
     <div class="row">
-      <div class="col-xs-12 col-sm-8 col-md-8">
-        <div class="card_planet" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://68.media.tumblr.com/4170a36a91012ab839658113909762d5/tumblr_mm7nhfz9yP1rx0ahxo1_400.gif');">
-          <div class="card-description">
-            <h2> Population informations </h2>
-            <p> Name : <%= @corridor.planet.population%> </p>
-            <p> Level of sociability : <%= @corridor.planet.sociability%> </p>
-            <p> Sexual compatibility with humans : <%= @corridor.planet.sexual_compatibility%> </p>
+      <div class="col-xs-12 col-md-6">
+        <div class="card-info">
+          <div class="col-xs-12 col-md-12">
+            <div class="card-image" style="background-image: url('<%= image_path(@corridor.planet.image)%>');">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <div class="card-description">
+              <h2> Planet informations </h2>
+              <p> Temperature: <%= @corridor.planet.temperature%>°C</p>
+              <p> Distance from TNC earthbase: <%= @corridor.planet.distance%> </p>
+              <p> Environment: <%= @corridor.planet.environment%> </p>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="col-xs-12 col-md-6">
+        <div class="card-info">
+          <div class="col-xs-12 col-md-12">
+            <div class="card-image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://68.media.tumblr.com/4170a36a91012ab839658113909762d5/tumblr_mm7nhfz9yP1rx0ahxo1_400.gif');">
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-12">
+            <div class="card-description">
+              <h2> Population informations </h2>
+              <p> Name : <%= @corridor.planet.population%> </p>
+              <p> Level of sociability : <%= @corridor.planet.sociability%> </p>
+              <p> Sexual compatibility with humans : <%= @corridor.planet.sexual_compatibility%> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xs-12">
+          <div class="buttons">
+            <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor),
+             method: :post,
+             class: "btn btn-medium" %> </br>
+            <br> <%= link_to 'back to your search',
+                corridors_path,
+             method: :get,
+             class: "btn btn-medium" %> </br>
+          </div>
+      </div>
+
     </div>
+
   </div>
-
-
-  <div class="container text-center">
-     <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor),
-     method: :post,
-     class: "btn btn-medium" %> </br>
-  </div>
-
-  <div class="container text-center">
-     <br> <%= link_to 'back to your search',
-        corridors_path,
-     method: :get,
-     class: "btn btn-medium" %> </br>
-  </div>
-
 </div>
+
 
