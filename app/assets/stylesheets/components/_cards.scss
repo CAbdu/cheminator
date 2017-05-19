@@ -27,7 +27,11 @@ h2 {
   border-width: 5px;
 }
 
-
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
 
 .card-description h2 {
   font-size: 24px;
@@ -65,18 +69,18 @@ h2 {
   color: white;
 }
 
-.card-description {
+.card-informations {
   text-align: center;
   bottom: 10px;
   left: 10px;
 }
-
-  .card-description h2 {
+informations
+  .card-informations h2 {
     font-size: 24px;
     font-weight: bold;
   }
 
-  .card-description p {
+  .card-informations p {
     font-size: 20px;
     color: white,
     }
