@@ -13,7 +13,7 @@
           </div>
           <div class="col-xs-12 col-md-12">
             <div class="card-informations">
-              <h2> Planet informations </h2>
+              <h2> Planet information </h2>
               <p> Temperature: <%= @corridor.planet.temperature%>°C</p>
               <p> Distance from TNC earthbase: <%= @corridor.planet.distance%> </p>
               <p> Environment: <%= @corridor.planet.environment%> </p>
@@ -30,9 +30,9 @@
           </div>
           <div class="col-xs-12 col-md-12">
             <div class="card-informations">
-              <h2> Population informations </h2>
-              <p> Name : <%= @corridor.planet.population%> </p>
-              <p> Level of sociability : <%= @corridor.planet.sociability%> </p>
+              <h2> Population information </h2>
+              <p> Composition : <%= @corridor.planet.population%> </p>
+              <p> Sociability level : <%= @corridor.planet.sociability%> </p>
               <p> Sexual compatibility with humans : <%= @corridor.planet.sexual_compatibility%> </p>
             </div>
           </div>
@@ -41,11 +41,11 @@
 
       <div class="col-xs-12">
           <div class="buttons">
-
             <%= simple_form_for [@corridor, @booking] do |f| %>
-              <%= f.input :date, as: :date, html5: true, input_html: { value: @date }  %>
-              <%= f.submit 'book this TNC now!', class: "btn btn-medium" %>
+              <%= f.hidden_field :date, as: :date, html5: true, label: "Your date is", input_html: { value: @date } %>
+              <%= f.submit 'book this TNC now!', class: "btn btn-medium"  %>
             <% end %>
+
             <br> <%= link_to 'back to your search',
                 corridors_path,
              method: :get,
