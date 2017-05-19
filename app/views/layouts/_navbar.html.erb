@@ -3,14 +3,12 @@
   <a href="/" class="navbar-cheminator-brand">
     <%= image_tag "cheminator_helmet.jpg" %>
   </a>
-
   <!-- Right Navigation -->
   <div class="navbar-cheminator-right hidden-xs hidden-sm">
-
     <!-- Text link -->
-
     <!-- Text link -->
-    <%= link_to 'Team', team_path, class: "navbar-cheminator-item navbar-cheminator-link"  %>
+        <%= link_to 'Team', team_path, class: "btn-nav"  %>
+
 
     <!-- Notification link-->
     <a href="" class="navbar-cheminator-item navbar-cheminator-link">
@@ -18,11 +16,11 @@
         <div class="badge badge-blue"></div>
       </div>
     </a>
-
     <!-- Profile picture and dropdown -->
     <div class="navbar-cheminator-item">
+      <% if user_signed_in? %>
       <div class="dropdown">
-         <img src="http://placehold.it/50x50" class="avatar dropdown-toggle" id="navbar-cheminateor-menu" data-toggle="dropdown">
+         <img src="https://storage.googleapis.com/cdn.wombo.gg/assets/images/emojione/chucknorris.png" class="avatar dropdown-toggle" id="navbar-cheminateor-menu" data-toggle="dropdown">
         <ul class="dropdown-menu dropdown-menu-right navbar-cheminator-dropdown-menu">
           <li><a href="#">Profile</a></li>
           <li><a href="#">Dashboard</a></li>
@@ -31,11 +29,12 @@
         </ul>
       </div>
     </div>
-
+    <%else %>
+    </div>
     <!-- Button (call-to-action) -->
-    <%= link_to "Log in", user_session_path, method: :post %>
+    <%= link_to "Log in", user_session_path, method: :post, class: "btn-nav" %>
+    <% end %>
   </div>
-
   <!-- Dropdown appearing on mobile only -->
   <div class="navbar-cheminator-item hidden-md hidden-lg">
     <div class="dropdown">
