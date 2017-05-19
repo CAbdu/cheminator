@@ -16,6 +16,11 @@ class CorridorsController < ApplicationController
     @hash = Gmaps4rails.build_markers(@corridors) do |corridor, marker|
       marker.lat corridor.latitude
       marker.lng corridor.longitude
+      marker.picture({
+        url: "http://www.iconsdb.com/icons/preview/icon-sets/web-2-red/planet-xl.png",
+        width: 64,
+        height: 64
+      })
       # marker.infowindow render_to_string(partial: "/corridors/map_box", locals: { corridor: corridor })
     end
   end
