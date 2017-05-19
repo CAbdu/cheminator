@@ -41,9 +41,11 @@
 
       <div class="col-xs-12">
           <div class="buttons">
-            <br> <%= link_to 'book this TNC now!', corridor_bookings_path(@corridor),
-             method: :post,
-             class: "btn btn-medium" %> </br>
+
+            <%= simple_form_for [@corridor, @booking] do |f| %>
+              <%= f.input :date, as: :date, html5: true, input_html: { value: @date }  %>
+              <%= f.submit 'book this TNC now!', class: "btn btn-medium" %>
+            <% end %>
             <br> <%= link_to 'back to your search',
                 corridors_path,
              method: :get,

@@ -3,18 +3,12 @@
   <div class="banner" style="background-image: url('https://cdn.dribbble.com/users/623359/screenshots/3061757/rocket_launch.gif');">
 
     <div>
-
       <h1>Your space travels</h1>
-
         <% @bookings.reverse.each do |booking| %>
-
-        <br> You 🚀 to <%= booking.planet.name %> on <%= booking.created_at.strftime("%d/%m/%Y") %> </br>
-
-
-
+        <br> You 🚀 to <%= booking.planet.name %> on <%= booking.date %> </br>
       <% end %>
-
     </div>
+
   </div>
 </div>
 
