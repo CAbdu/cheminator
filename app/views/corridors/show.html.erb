@@ -42,7 +42,7 @@
       <div class="col-xs-12">
           <div class="buttons">
             <%= simple_form_for [@corridor, @booking] do |f| %>
-              <%= f.hidden_field :date, as: :date, html5: true, label: "Your date is", input_html: { value: @date } %>
+              <%= f.input :date, as: :date, html5: true, label: "Your date is", input_html: { value: @date } %>
               <%= f.submit 'book this TNC now!', class: "btn btn-medium"  %>
             <% end %>
 
