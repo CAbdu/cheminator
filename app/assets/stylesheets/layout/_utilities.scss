@@ -82,4 +82,31 @@
   padding-top: 10px;
 }
 
+.team h1 {
+  margin-top: 0px;
+}
+
+.team img {
+  // border-color: #F17300;
+  // border-radius: 5px;
+  // border-style: solid;
+  // border-width: 1px;
+  width: 350px;
+  max-height: 350px;
+}
+
+.team img:hover {
+  // border-color: #F17300;
+  // border-radius: 5px;
+  // border-style: solid;
+  // border-width: 1px;
+  width: 350px;
+  max-height: 350px;
+  opacity: 0.5;
+}
+
+.team h2 {
+  font-weight : 30px;
+  text-align: center;
+}
 
